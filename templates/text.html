@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artem</title>
+    <meta charset="utf-8" />>
+</head>
+<body>
+    <form action="/ToDo" method="post">
+        <textarea type="text" name="ToDo"></textarea>
+        <button type="submit">Подтвердить</button>
+    </form>
+    {% for elem in todo %}
+    <li>{{elem}}
+    <a href="/deleteToDo/{{loop.index0}}">Удалить</a>
+    </li>
+    {% endfor %}
+</body>
+</html>
